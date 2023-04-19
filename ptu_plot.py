@@ -32,7 +32,6 @@ date = date( int(file[-17:-13]), int(file[-13:-11]), int(file[-11:-9]) )
 # stime = datetime(2022,3,9,3,29,29)
 # date = date( int(file[-17:-13]), int(file[-13:-11]), int(file[-11:-9]) )
 
-
 # IMPORT data as pandas dataframe
 import pandas as pd
 columns = ['time', 'P', 'altitude', 'T', 'RH']
@@ -47,8 +46,8 @@ RH_at_icesat = 100 * ty.physics.e_eq_ice_mk(data['T']+273.16) / ty.physics.e_eq_
 # PLOT IT
 import matplotlib.pyplot as plt
 fig = plt.figure(facecolor='none')
-plt.plot(data['RH'], data['altitude'], linewidth=2, label='Relative humidity')
-plt.plot(RH_at_icesat, data['altitude'], linewidth=2, label='RH at ice-sat' )
+plt.plot(data['RH'], data['altitude'], 'green',  linewidth=2, label='Relative humidity')
+plt.plot(RH_at_icesat, data['altitude'], 'purple', linewidth=2, label='RH at ice-sat' )
 plt.xlabel('RH')
 plt.ylabel('Altitude')
 plt.title(f'{date}')
