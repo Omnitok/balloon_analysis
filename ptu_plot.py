@@ -4,7 +4,7 @@
 Created on Wed Apr 19 09:33:31 2023
 
 @author: Stenszky János
-Relative Humidity in respect ti ICE calculation
+Relative Humidity in respect to ICE calculation
 """
 from datetime import date, datetime
 import typhon as ty
